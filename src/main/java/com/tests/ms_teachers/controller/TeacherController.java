@@ -35,13 +35,13 @@ public class TeacherController {
 
   @PostMapping("/create")
   public ResponseEntity<ResponseDto> createTeacher(@RequestBody TeacherDto teacher) {
-    ResponseDto response = teacherService.createTeacher(null);
+    ResponseDto response = teacherService.createTeacher(teacher);
     return ResponseEntity.status(response.getHttpStatus()).body(response);
   }
 
   @PutMapping("/update")
   public ResponseEntity<ResponseDto> updateTeacher(@RequestBody TeacherDto teacher) {
-    ResponseDto response = teacherService.updateTeacher(null);
+    ResponseDto response = teacherService.updateTeacher(teacher);
     return ResponseEntity.status(response.getHttpStatus()).body(response);
   }
 

@@ -69,7 +69,6 @@ public class TeacherService implements TeacherServiceInter {
   public ResponseDto createTeacher(TeacherDto teacher) {
     try {
       TeacherModel teacherModel = TeacherModel.builder()
-          .id(teacher.getId())
           .name(teacher.getName())
           .surname(teacher.getSurname())
           .gender(teacher.getGender())

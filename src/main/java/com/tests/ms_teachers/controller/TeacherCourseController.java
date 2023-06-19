@@ -33,7 +33,7 @@ public class TeacherCourseController {
 
   @PostMapping
   public ResponseEntity<ResponseDto> createTeacherCourse(@RequestBody TeacherCourseDto teacherCourse) {
-    ResponseDto response = teacherCourseService.createTeacherCourse(null);
+    ResponseDto response = teacherCourseService.createTeacherCourse(teacherCourse);
     return ResponseEntity.status(response.getHttpStatus()).body(response);
   }
 }

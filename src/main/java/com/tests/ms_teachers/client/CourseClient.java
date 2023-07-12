@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.tests.ms_teachers.dto.ResponseDto;
 
-@FeignClient(name = "ms-courses", url = "http://localhost:8081/api")
+@FeignClient(name = "ms-courses", url = "${external.service.url}")
 public interface CourseClient {
 
   @GetMapping("/v1/courses")
